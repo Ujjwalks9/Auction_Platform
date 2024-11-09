@@ -6,6 +6,7 @@ import fileUpload from "express-fileupload";
 import cookieParser from "cookie-parser";
 import { connection } from "./database/connection.js";
 import { errorMiddleware } from "./middlewares/error.js";
+import userRouter from "./router/userRoutes.js";
 
 //const express = require("express") we can also import in this format
 const app = express();
@@ -29,6 +30,8 @@ app.use(fileUpload({
     tempFileDir:"/tmp/",
     })
 ); //alternative middleware to mutter(used to store files in the backend), easy syntax 
+
+app.use("/api/v1/user", userRouter);
 
 connection();
 app.use(errorMiddleware);

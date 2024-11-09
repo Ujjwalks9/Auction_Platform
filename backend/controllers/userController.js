@@ -1,5 +1,5 @@
-import ErrorHandler from "../middlewares/error";
-import { User } from "../models/userSchema";
+import ErrorHandler from "../middlewares/error.js";
+import { User } from "../models/userSchema.js";
 import cloudinary from "cloudinary";
 
 //here usercontroller function requests for the data form the frontend 

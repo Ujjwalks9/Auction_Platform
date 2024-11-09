@@ -1,4 +1,4 @@
-import mongoose from "mogoose";
+import mongoose from "mongoose";
 import bycrypt from "bcrypt";  // Optional: For password hashing
 import jwt from "jsonwebtoken";
 
